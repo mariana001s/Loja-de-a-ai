@@ -1,0 +1,14 @@
+.adicionar {
+    font-size: 14px; /* Tamanho da fonte */
+    padding: 8px 16px; /* Distância interna do botão (altura e largura) */
+    border-radius: 5px; /* Arredondamento das bordas */
+    background-color: #4CAF50; /* Cor de fundo do botão */
+    color: white; /* Cor do texto */
+    border: none; /* Retira a borda padrão */
+    cursor: pointer; /* Cursor de mãozinha ao passar o mouse */
+    transition: background-color 0.3s; /* Transição suave para a cor de fundo */
+}
+
+.adicionar:hover {
+    background-color: #45a049; /* Cor de fundo ao passar o mouse */
+}

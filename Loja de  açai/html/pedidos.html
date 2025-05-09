@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meus Pedidos - Loja de Açaí</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="pedidos.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <div class="menu-toggle">
+            <button onclick="toggleMenu()">☰ Menu</button>
+        </div>
+        <h1>Meus Pedidos</h1>
+    </header>
+
+    <!-- Menu Lateral -->
+    <div class="menu" id="menu">
+        <button class="close-btn" onclick="toggleMenu()">×</button>
+        <ul>
+            <li><a href="home.html">Cardápio</a></li>
+            <li><a href="Paginainicial.html">Página Inicial</a></li>
+            <li><a href="minhaconta.html">Minha Conta</a></li>
+            <li><a href="contato.html">Contato</a></li>
+            <li><a href="pedidos.html">Meus Pedidos</a></li>
+            <li><a href="redessociais.html">Redes Sociais</a></li>
+            <li><a href="endereco.html">Endereço</a></li>
+        </ul>
+    </div>
+
+    <!-- Seção de Pedidos -->
+    <div class="container">
+        <h2>Meus Pedidos Recentes</h2>
+
+        <!-- Lista de Pedidos -->
+        <div id="pedidos-lista">
+            <!-- Exemplo de Pedido -->
+            <!-- Se não houver pedidos, mostrar esta mensagem -->
+            <p id="mensagem-vazia">Você ainda não fez nenhum pedido.</p>
+        </div>
+    </div>
+
+    <script>
+        // Simulação de pedidos do usuário (poderia ser dinâmico com dados do banco de dados)
+        const pedidos = [
+            {
+                id: 1,
+                data: '10/04/2025',
+                itens: ['Copo de Açaí Puro', 'Açaí com Frutas'],
+                status: 'Enviado'
+            },
+            {
+                id: 2,
+                data: '11/04/2025',
+                itens: ['Copo de Açaí Puro'],
+                status: 'Em Preparação'
+            },
+            {
+                id: 3,
+                data: '12/04/2025',
+                itens: ['Açaí com Frutas'],
+                status: 'Entregue'
+            }
+        ];
+
+        // Função para adicionar um novo pedido feito hoje
+        function adicionarPedidoHoje() {
+            const hoje = new Date();
+            const dataHoje = hoje.toLocaleDateString('pt-BR'); // Formato dd/mm/aaaa
+
+            // Adiciona um novo pedido com a data de hoje
+            const novoPedido = {
+                id: pedidos.length + 1,
+                data: dataHoje,
+                itens: ['Açaí com Morango', 'Açaí com Banana'],
+                status: 'Em Preparação'
+            };
+
+            pedidos.push(novoPedido); // Adiciona o pedido na lista
+            exibirPedidos(); // Atualiza a exibição
+        }
+
+        // Função para exibir pedidos
+        function exibirPedidos() {
+            const pedidosLista = document.getElementById('pedidos-lista');
+            const mensagemVazia = document.getElementById('mensagem-vazia');
+            
+            pedidosLista.innerHTML = '';  // Limpa a lista atual
+            mensagemVazia.style.display = pedidos.length === 0 ? 'block' : 'none';  // Exibe mensagem de "sem pedidos" se necessário
+
+            pedidos.forEach(pedido => {
+                const pedidoDiv = document.createElement('div');
+                pedidoDiv.classList.add('pedido');
+
+                pedidoDiv.innerHTML = `
+                    <h3>Pedido #${pedido.id}</h3>
+                    <p><strong>Data:</strong> ${pedido.data}</p>
+                    <p><strong>Itens:</strong> ${pedido.itens.join(', ')}</p>
+                    <p><strong>Status:</strong> ${pedido.status}</p>
+                    <a href="#" class="btn-repetir">Repetir Pedido</a>
+                    <a href="#" class="btn-cancelar">Cancelar Pedido</a>
+                `;
+
+                pedidosLista.appendChild(pedidoDiv);
+            });
+        }
+
+        // Carregar os pedidos ao carregar a página
+        window.onload = () => {
+            exibirPedidos(); // Exibe os pedidos existentes
+            adicionarPedidoHoje(); // Simula um pedido feito hoje
+        };
+    </script>
+</body>
+</html>

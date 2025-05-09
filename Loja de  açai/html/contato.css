@@ -1,0 +1,116 @@
+/* Estilo para a seção de Contato */
+#contato {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f4f4f9;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+    width: 100%;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto; /* Centraliza a seção horizontalmente */
+}
+
+/* Título da seção */
+#contato h2 {
+    font-size: 2.5rem;
+    color: #800080; /* Cor roxa */
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Parágrafo explicativo */
+#contato p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+/* Estilo para o formulário */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    align-items: center;
+}
+
+/* Estilo para os campos de texto */
+input, textarea {
+    width: 100%;
+    max-width: 600px;
+    padding: 12px 15px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+/* Efeito de foco nos campos */
+input:focus, textarea:focus {
+    border-color: #800080;
+    box-shadow: 0 0 8px rgba(128, 0, 128, 0.5);
+    outline: none;
+}
+
+/* Estilo para o botão de envio */
+button {
+    background-color: #800080; /* Cor roxa */
+    color: white;
+    padding: 14px 22px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+    width: 50%;
+    margin-top: 20px;
+}
+
+/* Efeito hover no botão */
+button:hover {
+    background-color: #4b0082; /* Um tom mais escuro de roxo */
+    transform: translateY(-3px);
+}
+
+/* Efeito de foco no botão */
+button:focus {
+    outline: none;
+}
+
+/* Estilo para o textarea */
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    #contato {
+        padding: 30px 15px;
+    }
+
+    #contato h2 {
+        font-size: 2rem;
+    }
+
+    input, textarea {
+        max-width: 90%;
+    }
+
+    button {
+        width: 70%;
+    }
+}
+
+

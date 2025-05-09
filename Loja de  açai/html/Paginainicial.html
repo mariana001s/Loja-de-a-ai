@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja Virtual</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <meta name="description" content="Loja virtual especializada em açaí. Explore nosso cardápio e faça seu pedido online!">
+    <meta name="keywords" content="açaí, loja virtual, delivery, cardápio, frutas">
+    <meta name="author" content="Loja de Açaí">
+</head>
+<body>
+    <header>
+        <div class="menu-toggle">
+            <button onclick="toggleMenu()">☰ Menu</button>
+        </div>
+        <h1>Bem-vindo à Loja Virtual de Açaí</h1>
+    </header>
+    
+    <nav class="menu" id="menu">
+        <button class="close-btn" onclick="toggleMenu()">×</button>
+        <ul>
+            <li><a href="home.html">Cardápio</a></li>
+            <li><a href="Paginainicial.html">Página Inicial</a></li>
+            <li><a href="minhaconta.html">Minha Conta</a></li>
+            <li><a href="contato.html">Contato</a></li>
+            <li><a href="pedidos.html">Meus Pedidos</a></li>
+            <li><a href="redessociais.html">Redes Sociais</a></li>
+            <li><a href="endereco.html">Endereço</a></li>
+    </nav>
+    
+    <main class="container">
+        <h2>Mais Vendidos</h2>
+        <section class="menu-items">
+            <article class="menu-item">
+                <img src="açaipuro.png" alt="Copo de Açaí Puro">
+                <h3>Copo de Açaí Puro</h3>
+                <p>Delicioso açaí puro servido no copo.</p>
+                <p><strong>R$ 10,00</strong></p>
+                <button class="adicionar" onclick="addToCart('Copo de Açaí Puro', 10)">Adicionar</button>
+            </article>
+            
+            <article class="menu-item">
+                <img src="açai1frutas.png" alt="Açaí com Frutas">
+                <h3>Açaí com Frutas</h3>
+                <p>Açaí com morango, banana e leite em pó.</p>
+                <p><strong>R$ 15,00</strong></p>
+                <button class="adicionar" onclick="addToCart('Açaí com Frutas', 15)">Adicionar</button>
+            </article>
+        </section>
+    </main>
+    
+    <aside class="cart">
+        <h2>Carrinho de Compras</h2>
+        <ul id="cart-items"></ul>
+        <p><strong>Total: R$ <span id="total">0,00</span></strong></p>
+        <button onclick="checkout()">Finalizar Compra</button>
+        <button class="cancelar" onclick="clearCart()">Cancelar Pedido</button>
+    </aside>
+    
+    <footer>
+        <p>&copy; 2025 Loja de Açaí - Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

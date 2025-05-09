@@ -1,0 +1,33 @@
+/* Estilo da página de pedidos */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h2 {
+    text-align: center;
+    color: #6A0DAD; /* Cor roxa */
+}
+
+.pedido {
+    background-color: #f4f4f4;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.pedido h3 {
+    margin: 0 0 10px;
+    color: #333;
+}
+
+.pedido p {
+    margin: 5px 0;
+    color: #555;
+}
+
+.pedido strong {
+    color: #6A0DAD;
+}

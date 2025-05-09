@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <meta name="description" content="Loja virtual especializada em açaí. Explore nosso cardápio e faça seu pedido online!">
+    <meta name="keywords" content="açaí, loja virtual, delivery, cardápio, frutas">
+    <meta name="author" content="Loja de Açaí">
+</head>
+
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <div class="menu-toggle">
+            <button onclick="toggleMenu()">☰ Menu</button>
+        </div>
+        <h1>Bem-vindo à Loja Virtual de Açaí</h1>
+    </header>
+
+    <!-- Menu Lateral -->
+    <div class="menu" id="menu">
+        <button class="close-btn" onclick="toggleMenu()">×</button>
+        <ul>
+            <li><a href="home.html">Cardápio</a></li>
+            <li><a href="Paginainicial.html">Página Inicial</a></li>
+            <li><a href="minhaconta.html">Minha Conta</a></li>
+            <li><a href="contato.html">Contato</a></li>
+            <li><a href="pedidos.html">Meus Pedidos</a></li>
+            <li><a href="redessociais.html">Redes Sociais</a></li>
+            <li><a href="endereco.html">Endereço</a></li>
+        </ul>
+    </div>
+
+ <!-- Seção de Conteúdo -->
+<div class="main-content">
+    <!-- Seção de Boas-Vindas -->
+    <div class="container text-center">
+        <h1>Bem-vindo à Loja de Açaí!</h1>
+        <p>Monte seu açaí do jeito que quiser! 🌿🍓🍫</p>
+        <a href="cardapio.html" class="btn btn-primary">Ver Cardápio</a>
+    </div>
+</div>
+
+
+        <!-- Cardápio -->
+<section class="cardapio">
+    <h2>Nosso Cardápio</h2>
+
+    <div class="produto">
+        <h3>Açaí Tradicional</h3>
+        <p><em>Açaí puro com acompanhamentos variados</em></p>
+        <p><strong>Preço: R$ 14,90</strong></p>
+        <a href="#" class="btn-adicionar" data-produto="Açaí Tradicional" data-preco="14.90">Adicionar</a>
+    </div>
+
+    <div class="produto">
+        <h3>Açaí com Morango</h3>
+        <p><em>Açaí com morangos frescos e granola</em></p>
+        <p><strong>Preço: R$ 19,90</strong></p>
+        <a href="#" class="btn-adicionar" data-produto="Açaí com Morango" data-preco="19.90">Adicionar</a>
+    </div>
+
+    <div class="produto">
+        <h3>Açaí com Paçoca</h3>
+        <p><em>Açaí com pedaços de paçoca e mel</em></p>
+        <p><strong>Preço: R$ 17,50</strong></p>
+        <a href="#" class="btn-adicionar" data-produto="Açaí com Paçoca" data-preco="17.50">Adicionar</a>
+    </div>
+
+    <!-- Novos produtos adicionados -->
+    <div class="produto">
+        <h3>Açaí com Banana e Nutella</h3>
+        <p><em>Açaí com rodelas de banana e Nutella cremosa</em></p>
+        <p><strong>Preço: R$ 22,90</strong></p>
+        <a href="#" class="btn-adicionar" data-produto="Açaí com Banana e Nutella" data-preco="22.90">Adicionar</a>
+    </div>
+
+    <div class="produto">
+        <h3>Açaí com Coco e Amêndoas</h3>
+        <p><em>Açaí com lascas de coco e amêndoas torradas</em></p>
+        <p><strong>Preço: R$ 21,50</strong></p>
+        <a href="#" class="btn-adicionar" data-produto="Açaí com Coco e Amêndoas" data-preco="21.50">Adicionar</a>
+    </div>
+
+    <div class="produto">
+        <h3>Açaí Fitness</h3>
+        <p><em>Açaí com granola, mel e chia</em></p>
+        <p><strong>Preço: R$ 18,90</strong></p>
+        <a href="#" class="btn-adicionar" data-produto="Açaí Fitness" data-preco="18.90">Adicionar</a>
+    </div>
+
+    <div class="produto">
+        <h3>Açaí com Maracujá</h3>
+        <p><em>Açaí com maracujá fresco e granola</em></p>
+        <p><strong>Preço: R$ 19,50</strong></p>
+        <a href="#" class="btn-adicionar" data-produto="Açaí com Maracujá" data-preco="19.50">Adicionar</a>
+    </div>
+
+    <div class="produto">
+        <h3>Açaí Tropical</h3>
+        <p><em>Açaí com abacaxi, manga e castanhas</em></p>
+        <p><strong>Preço: R$ 20,90</strong></p>
+        <a href="#" class="btn-adicionar" data-produto="Açaí Tropical" data-preco="20.90">Adicionar</a>
+    </div>
+</section>
